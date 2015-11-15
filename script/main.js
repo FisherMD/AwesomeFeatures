@@ -9,12 +9,10 @@ function up() {
 
 function nav() {
 	if($(this).scrollTop() > 30) {
-		$('#nav').removeClass('default');
 		$('#nav').addClass('scroll');
 	}
 	else {
 		$('#nav').removeClass('scroll');
-		$('#nav').addClass('default');
 	}
 };
 
