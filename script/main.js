@@ -48,19 +48,11 @@ $(document).ready(function() {
 		var el = $(this).attr('href');
 		
 		if($(window).scrollTop() < 40) {
-			$('body').animate({scrollTop: $(el).offset().top + 20}, 500);
+			$('body, html').animate({scrollTop: $(el).offset().top + 20}, 500);
 		}
 		else {
-			$('body').animate({scrollTop: $(el).offset().top + 70}, 500);
+			$('body, html').animate({scrollTop: $(el).offset().top + 70}, 500);
 		}
-		/* ----------- */
-		if($(window).scrollTop() < 40) {
-			$('html').animate({scrollTop: $(el).offset().top + 20}, 500);
-		}
-		else {
-			$('html').animate({scrollTop: $(el).offset().top + 70}, 500);
-		}
-
 		return false;
 	});
 	$(window).scroll(function(event) {

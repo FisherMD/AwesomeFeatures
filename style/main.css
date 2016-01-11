@@ -24,6 +24,7 @@ h1 {
 #container {
 	max-width: 960px;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
 #nav {
@@ -79,7 +80,7 @@ h1 {
 #underscore {
 	width: 20px;
 	height: 3px;
-	background: #fff200;
+	background: #84c6d5;
 	position: absolute;
 	bottom: 3px;
 	opacity: 0;
@@ -99,7 +100,7 @@ h1 {
 
 #nav li:hover > a,
 #nav li.active > a{
-	color: #fff200;
+	color: #84c6d5;
 }
 
 div[id^='section'] {
