@@ -1,0 +1,21 @@
+{
+  "name": "AwesomeFeatures",
+  "homepage": "https://github.com/afishr/AwesomeFeatures",
+  "authors": [
+    "Alex Fisher <cross9986@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1"
+  }
+}
