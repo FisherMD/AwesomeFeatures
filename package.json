@@ -1,0 +1,21 @@
+{
+  "name": "awesome-features",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afishr/AwesomeFeatures.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afishr/AwesomeFeatures/issues"
+  },
+  "homepage": "https://github.com/afishr/AwesomeFeatures#readme"
+}
