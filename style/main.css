@@ -99,13 +99,12 @@ h1 {
 	color: #84c6d5;
 }
 
-div[id^='section'] {
-	padding-bottom: 400px;
+#container {
 	padding-top: 100px;
 }
 
-div[id^='section']:last-child {
-	margin-bottom: 200px;
+.section {
+	margin-bottom: 500px;
 }
 
 #up {

@@ -1,5 +1,5 @@
 function up() {
-	if($(window).scrollTop() < 30) {
+	if($(window).scrollTop() < 110) {
 		$('#up').fadeOut();
 	}
 	else {
@@ -8,7 +8,7 @@ function up() {
 };
 
 function nav() {
-	if($(this).scrollTop() > 30) {
+	if($(this).scrollTop() > 20) {
 		$('#nav').addClass('scroll');
 	}
 	else {
@@ -18,9 +18,9 @@ function nav() {
 
 function check() {
 	$('div[id^="section"]').each(function() {
-		var topEdge = $(this).offset().top,
-				bottomEdge = topEdge + $(this).height(),
-				wScroll = $(window).scrollTop() + 100;
+		var topEdge = $(this).offset().top - 100,
+				bottomEdge = topEdge + $('.section > h1').height() + 100,
+				wScroll = $(window).scrollTop();
 
 		if(topEdge <= wScroll && bottomEdge >= wScroll) {
 			var currentId = $(this).attr('id'),
@@ -36,31 +36,27 @@ function check() {
 };
 
 $(document).ready(function() {
-	$('#underscore').css('left', $('#link1').position().left);
-	check();
-	$('a[id="up"]').click(function(event) {
-		$('body').animate({scrollTop: 0}, 500);
-		$('html').animate({scrollTop: 0}, 500);
-		return false;
-	});
-	$('a[href^="#section"]').click(function(event) {
-		event.preventDefault();
-		var el = $(this).attr('href');
-		
-		if($(window).scrollTop() < 40) {
-			$('body, html').animate({scrollTop: $(el).offset().top + 20}, 500);
-		}
-		else {
-			$('body, html').animate({scrollTop: $(el).offset().top + 70}, 500);
-		}
-		return false;
-	});
-	$(window).scroll(function(event) {
+	$(window).scroll(function() {
 		check();
 		nav();
 		up();
 	});
-	$(window).resize(function(event) {
+	$(window).resize(function() {
 		check();
+	});
+	$('a[id="up"]').click(function() {
+		$('body').animate({scrollTop: 0}, 500);
+		$('html').animate({scrollTop: 0}, 500);
+	});
+	$('a[href^="#section"]').click(function() {
+		event.preventDefault();
+		var el = $(this).attr('href');
+		
+		if($(window).scrollTop() > 20) {
+			$('body, html').animate({scrollTop: $(el).offset().top - 40}, 500);
+		}
+		else {
+			$('body, html').animate({scrollTop: $(el).offset().top - 90}, 500);
+		}
 	});
 }); //--> END ready
